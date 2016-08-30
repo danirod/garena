@@ -1,5 +1,7 @@
 # garena
 
+![Screenshot of my theme](screenshot.png)
+
 Garena is a lightweight and simple theme for Jekyll. Since it was born as personal theme for my website it's slightly opinionated. However, I've tried to design it to be very personalizable so that you can tweak it as you want.
 
 It has been designed using Bootstrap 3 so it fits very well on mobile screens. However, it has been tweaked a little so that it doesn't look like _another_ Bootstrap site.
