@@ -1,0 +1,61 @@
+---
+layout: root
+---
+<div class="container main-container">
+<article class="blog-post row">
+  <header>
+    <div class="title col-sm-12">
+      <h2>{{ page.title }}</h2>
+    </div>
+    <div class="post-meta col-sm-3">
+      <p class="date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></p>
+      <p>Category: {{ page.category }}</p>
+      <p class="social-share">
+        {% include sharers.html %}
+      </p>
+    </div>
+  </header>
+  <div class="col-sm-9 post-content">
+    {{ content }}
+
+    <p class="home"><a href="{{ '/' | prepend: site.basepath }}">&#8617; Back home</a></p>
+  </div>
+</article>
+</div>
+
+<div class="author-container">
+<aside class="about-author container main-container">
+  <h3>About the author</h3>
+  <div class="row">
+  <div class="col-xs-2">
+    {% if site.author.gravatar %}
+    <img alt="Author photo" class="img-responsive img-thumbnail" src="//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=200" class="author-photo">
+    {% endif %}
+  </div>
+  <div class="col-xs-10">
+    <p class="lead">{{ site.author.name }}</p>
+    <p>{{ site.author.bio }}</p>
+
+    <ul class="list-unstyled">
+    {% if site.author.twitter %}
+    <li>
+      <a href="https://twitter.com/{{ site.author.twitter }}" title="Go to my profile on Twitter">
+        <i class="fa fa-twitter"></i> @{{ site.author.twitter }} on Twitter
+      </a>
+    </li>
+    {% endif %}
+
+    {% if site.author.github %}
+    <li>
+      <a href="https://github.com/{{ site.author.github }}" title="Go to my profile on GitHub">
+        <i class="fa fa-github"></i> /{{ site.author.github }} on GitHub
+      </a>
+    </li>
+    {% endif %}
+
+    <li><a href="{{ '/' | prepend: site.basepath }}">Explore the rest of this site &raquo;</a></li>
+    </ul>
+    </div>
+  </div>
+</aside>
+</div>

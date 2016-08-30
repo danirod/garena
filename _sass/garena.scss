@@ -1,0 +1,13 @@
+// These settings tweak how the style is displayed.
+$accent_color: #335980;
+$masthead_color: desaturate(lighten($accent_color, 50%), 25%);
+$link_color: lighten(saturate($accent_color, 30%), 5%);
+$font-family: -apple-system, BlinkMacSystemFont, DejaVu Sans, Roboto, Helvetica, Arial, sans-serif;
+$font-size: 16px;
+$title-font-family: Montserrat, $font-family;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import "garena/layout";
+@import "garena/typography";
+@import "garena/highlight";
+@import "garena/pages";

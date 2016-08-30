@@ -1,0 +1,27 @@
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+h1, h2, h3 {
+  font-family: $title-font-family;
+}
+
+a {
+  color: $link-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.blog-post, .page-item {
+  header h2 { font-size: 34px; }
+}
+
+.page-item header h2 {
+  text-align: center;
+}
+
+.blog-post, .page-item {
+  line-height: 150%;
+}

@@ -1,0 +1,193 @@
+/* This is the layout CSS file. */
+
+html, body {
+  height: 100%;
+}
+
+code {
+  background-color: $masthead_color;
+  color: $link_color;
+}
+
+.main-container {
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
+
+.author-container, .author-container + .mastfoot {
+  background: #f0f0f0;
+}
+
+.author-container {
+  border-top: 1px solid #d8d8d8;
+  h3 {
+    font-family: $font-family !important;
+    font-weight: normal;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .row {
+    margin-top: 1em;
+  }
+}
+
+.masthead {
+  background: $masthead_color;
+  border-bottom: 1px solid darken($masthead_color, 10);
+
+  .navbar-collapse {
+    padding-right: 0;
+  }
+
+  .navbar-toggle {
+    margin-top: 23px;
+    margin-bottom: 23px;
+    .icon-bar { background: $link_color; }
+  }
+
+  a:hover {
+    background: transparent !important;
+    color: lighten($link_color, 30%);
+  }
+
+  .navbar-brand, .navbar-nav a {
+    height: 80px;
+    line-height: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    .navbar-collapse a {
+      height: auto;
+      line-height: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .navbar-brand {
+    font-family: $title-font-family;
+    font-size: 30px;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+}
+
+.mastfoot {
+  text-align: center;
+  font-size: 0.9em;
+  color: #808080;
+  padding-top: 3em;
+  padding-bottom: 1.5em;
+  font-weight: lighter;
+}
+
+.blog-post {
+  header h2 {
+    @media (min-width: 768px) {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    @media (max-width: 767px) {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      text-align: center;
+    }
+  }
+  .post-meta {
+    @media (min-width: 768px) {
+      color: #606060;
+      font-size: 90%;
+    }
+    @media (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 2em;
+      p {
+        display: inline;
+        &::before {
+          color: #606060;
+          content: ' | ';
+        }
+      }
+      p:first-child {
+        &::before {
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+.footnotes {
+  margin-top: 2em;
+  border-top: 1px solid #e0e0e0;
+  &::before {
+    content: 'Footnotes:';
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+
+.home {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.xml-button {
+  font-family: $font-family;
+}
+
+.social-share {
+  margin-top: 10px;
+  display: block !important;
+  &:before { content: none !important; }
+}
+
+.social-share a {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 21px;
+  display: inline-block;
+  margin-right: 1px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid rgba(black, 0.25);
+  background-image: linear-gradient(rgba(white, 0.25), rgba(white, 0));
+
+  @media screen and (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  &:hover { text-decoration: none; }
+
+  &.twitter-share {
+    background-color: #1DA1F2;
+    color: white;
+  }
+  &.facebook-share {
+    background-color: #3B5998;
+    color: white;
+  }
+  &.plus-share {
+    background-color: #d34836;
+    color: white;
+  }
+  &.linkedin-share {
+    background-color: #0077b5;
+    color: white;
+  }
+  &.whatsapp-share {
+    background-color: #25D366;
+    color: white;
+  }
+}

@@ -1,0 +1,8 @@
+{% for link in site.navigation %}
+
+  <li><a href="{{ link | prepend: site.basepath }}">
+    {% assign page = site.pages | where: 'url', link | first %}
+    {{ page.title }}
+  </a></li>
+
+{% endfor %}

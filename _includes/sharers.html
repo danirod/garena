@@ -1,0 +1,23 @@
+{% for share in site.share %}
+
+{% if share == 'twitter' %}
+<a class="twitter-share" title="Share this URL at Twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.author.twitter }}" target="_blank"><i class="fa fa-twitter"></i> <span class="sr-only">Tweet this</span></a>
+{% endif %}
+
+{% if share == 'facebook' %}
+<a class="facebook-share" title="Share this URL at Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank"><i class="fa fa-facebook"></i> <span class="sr-only">Share to Facebook</span></a>
+{% endif %}
+
+{% if share == 'google-plus' %}
+<a class="plus-share" title="Share this URL at Google+" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank"><i class="fa fa-google-plus"></i> <span class="sr-only">Share to Google+</span></a>
+{% endif %}
+
+{% if share == 'linkedin' %}
+<a class="linkedin-share" title="Share this URL at LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><i class="fa fa-linkedin"></i> <span class="sr-only">Send to LinkedIn</span></a>
+{% endif %}
+
+{% if share == 'whatsapp' %}
+<a class="whatsapp-share visible-xs-inline-block" title="Send this URL to WhatsApp" href="whatsapp://send?text={{ page.title }}: {{ site.url }}{{ page.url }}"><i class="fa fa-whatsapp"></i> <span class="sr-only">Send via WhatsApp</span></a>
+{% endif %}
+
+{% endfor %}
