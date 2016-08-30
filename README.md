@@ -1,8 +1,8 @@
 # garena
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+Garena is a lightweight and simple theme for Jekyll. Since it was born as personal theme for my website it's slightly opinionated. However, I've tried to design it to be very personalizable so that you can tweak it as you want.
 
-TODO: Delete this and the text above, and describe your gem
+It has been designed using Bootstrap 3 so it fits very well on mobile screens. However, it has been tweaked a little so that it doesn't look like _another_ Bootstrap site.
 
 ## Installation
 
@@ -28,11 +28,60 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
+### Layouts
+
+I have designed a few layouts for using within your page.
+
+* `default`: this is the default generic layout. Provides header and footer.
+* `post`: this layout can be used for writing blog posts.
+* `page`: this layout is used for generic pages such as an About page or a Projects page.
+* `front`: this layout is useful for making front pages because the `.lead` text appears bigger and stronger.
+
+There is another layout named `root`, but I don't encourage its use.
+
+### _config.yml
+
+The following theme features can be customized via your _config.yml file:
+
+* Navigation bar: you can link to pages at the navigation bar by setting the paths to those pages. The link name will be extracted from the page itself by looking at the `page.title` parameter. Please note that at the moment this might be buggy on pages that don't have a permalink set.
+
+```yaml
+navigation:
+- /
+- /about.html
+```
+
+* Sharers: they will be displayed on the left of your blogpost on desktop or above your blogpost on mobile. Clicking these links will share the post on the platform. At the moment the following platforms are supported. You can disable sharing on a platform by removing it from the array.
+
+```yaml
+share:
+- twitter
+- facebook
+- linkedin
+- google-plus
+- whatsapp
+```
+
+* Author information: this is displayed below every blog post. Still there is no way for disabling it if you don't want. I should fix that.
+
+```yaml
+author:
+  name: John Doe # your name
+  bio: This is an example bio # some text to put below your name
+  gravatar: # put your gravatar hash ( = MD5(your e-mail address) )
+  twitter: example # your twitter username, will appear in a link
+  github: example # your github username, will appear in a link
+```
+
+* Footer: you can set the text that will appear on the bottom. At the moment this accepts HTML.
+
+```yaml
+footer: 'Powered by Jekyll'
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/danirod/garena. Please, send issues on bugs you might encounter or features you would like to have added. Also, if you have an idea and want to contribute, fork the project, add your patches, and send a PR. They will be welcome here.
 
 ## Development
 
