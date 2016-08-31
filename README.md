@@ -1,4 +1,4 @@
-# garena
+# garena [![Gem Version](https://badge.fury.io/rb/garena.svg)](https://badge.fury.io/rb/garena)
 
 ![Screenshot of my theme](screenshot.png)
 
