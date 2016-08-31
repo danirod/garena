@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "garena"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Dani Rodríguez"]
   spec.email         = ["danirod@outlook.com"]
 
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/danirod/garena"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(_layouts|_includes|_sass|LICENSE|README)/i}) }
+  spec.files         = Dir.glob('_layouts/**/*') + Dir.glob('_includes/**/*') + Dir.glob('_sass/**/*') + %w(LICENSE.txt README.md screenshot.png)
 
   spec.add_development_dependency "jekyll", "~> 3.2"
   spec.add_development_dependency "bundler", "~> 1.12"
