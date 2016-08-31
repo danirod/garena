@@ -6,7 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Dani Rodríguez"]
   spec.email         = ["danirod@outlook.com"]
 
-  spec.summary       = %q{A lightweight theme designed for Jekyll.}
+  spec.summary       = "A lightweight theme designed for Jekyll."
+  spec.description   = "Garena is a lightweight and simple theme for Jekyll."
   spec.homepage      = "https://github.com/danirod/garena"
   spec.license       = "MIT"
 
